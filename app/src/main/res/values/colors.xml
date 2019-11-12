@@ -7,4 +7,18 @@
     <color name="transparent">#00000000</color>
     <color name="color_black">#000000</color>
     <color name="color_white">#FFFFFF</color>
+
+    <!--流式标签-->
+    <color name="flow_layout_label_default">#949AA5</color>
+    <color name="flow_layout_label_pink">#D4AEB5</color>
+    <color name="flow_layout_label_pink_alpha">#14D4AEB5</color>
+    <color name="flow_layout_label_green">#B4C6A5</color>
+    <color name="flow_layout_label_green_alpha">#14B4C6A5</color>
+    <color name="flow_layout_label_blue">#B0C6D1</color>
+    <color name="flow_layout_label_blue_alpha">#14B0C6D1</color>
+    <color name="flow_layout_label_yellow">#D3C3A0</color>
+    <color name="flow_layout_label_yellow_alpha">#14D3C3A0</color>
+    <color name="flow_layout_label_purple">#B9B2CF</color>
+    <color name="flow_layout_label_purple_alpha">#14B9B2CF</color>
+
 </resources>
