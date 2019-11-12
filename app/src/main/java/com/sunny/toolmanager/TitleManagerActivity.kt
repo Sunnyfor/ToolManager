@@ -4,9 +4,9 @@ import android.view.View
 import android.widget.Toast
 import com.sunny.toolmanager.base.BaseActivity
 
-class TitleActivity : BaseActivity() {
+class TitleManagerActivity : BaseActivity() {
 
-    override fun setLayout(): Int = R.layout.activity_main
+    override fun setLayout(): Int = R.layout.act_title_manager
 
     // 隐藏标题栏
 //    override fun initTitle(): View? = null
