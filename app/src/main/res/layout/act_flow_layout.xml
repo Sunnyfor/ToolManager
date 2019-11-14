@@ -2,7 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="FlowLayout" />
 
     <com.sunny.toolmanager.flow_layout.FlowLayout
         android:id="@+id/flowLayout"
@@ -13,5 +20,22 @@
         android:paddingRight="16dp"
         app:flChildSpacing="auto"
         app:flRowSpacing="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="FlowLayout2" />
+
+    <com.sunny.toolmanager.flow_layout.FlowLayout2
+        android:id="@+id/flowLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="2dp"
+        android:paddingRight="16dp"
+        app:flChildSpacing="auto"
+        app:flRowSpacing="4dp" />
+
 
 </LinearLayout>

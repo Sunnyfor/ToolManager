@@ -19,7 +19,7 @@ import java.util.List;
  * Mail yongzuo.chen@foxmail.com
  * Date 2019年11月12日 10:59:54
  */
-public class FlowLayout extends ViewGroup {
+public class FlowLayout2 extends ViewGroup {
     /**
      * Special value for the child view spacing.
      * SPACING_AUTO means that the actual spacing is calculated according to the size of the
@@ -54,11 +54,11 @@ public class FlowLayout extends ViewGroup {
     private List<Integer> mHeightForRow = new ArrayList<>();
     private List<Integer> mChildNumForRow = new ArrayList<>();
 
-    public FlowLayout(Context context) {
+    public FlowLayout2(Context context) {
         this(context, null);
     }
 
-    public FlowLayout(Context context, AttributeSet attrs) {
+    public FlowLayout2(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         TypedArray a = context.getTheme().obtainStyledAttributes(
@@ -290,7 +290,7 @@ public class FlowLayout extends ViewGroup {
     /**
      * Returns the horizontal spacing between child views.
      *
-     * @return The spacing, either {@link FlowLayout#SPACING_AUTO}, or a fixed size in pixels.
+     * @return The spacing, either {@link FlowLayout2#SPACING_AUTO}, or a fixed size in pixels.
      */
     public int getChildSpacing() {
         return mChildSpacing;
@@ -299,7 +299,7 @@ public class FlowLayout extends ViewGroup {
     /**
      * Sets the horizontal spacing between child views.
      *
-     * @param childSpacing The spacing, either {@link FlowLayout#SPACING_AUTO}, or a fixed size in
+     * @param childSpacing The spacing, either {@link FlowLayout2#SPACING_AUTO}, or a fixed size in
      *                     pixels.
      */
     public void setChildSpacing(int childSpacing) {
@@ -310,8 +310,8 @@ public class FlowLayout extends ViewGroup {
     /**
      * Returns the horizontal spacing between child views of the last row.
      *
-     * @return The spacing, either {@link FlowLayout#SPACING_AUTO},
-     * {@link FlowLayout#SPACING_ALIGN}, or a fixed size in pixels
+     * @return The spacing, either {@link FlowLayout2#SPACING_AUTO},
+     * {@link FlowLayout2#SPACING_ALIGN}, or a fixed size in pixels
      */
     public int getChildSpacingForLastRow() {
         return mChildSpacingForLastRow;
@@ -320,8 +320,8 @@ public class FlowLayout extends ViewGroup {
     /**
      * Sets the horizontal spacing between child views of the last row.
      *
-     * @param childSpacingForLastRow The spacing, either {@link FlowLayout#SPACING_AUTO},
-     *                               {@link FlowLayout#SPACING_ALIGN}, or a fixed size in pixels
+     * @param childSpacingForLastRow The spacing, either {@link FlowLayout2#SPACING_AUTO},
+     *                               {@link FlowLayout2#SPACING_ALIGN}, or a fixed size in pixels
      */
     public void setChildSpacingForLastRow(int childSpacingForLastRow) {
         mChildSpacingForLastRow = childSpacingForLastRow;
@@ -331,7 +331,7 @@ public class FlowLayout extends ViewGroup {
     /**
      * Returns the vertical spacing between rows.
      *
-     * @return The spacing, either {@link FlowLayout#SPACING_AUTO}, or a fixed size in pixels.
+     * @return The spacing, either {@link FlowLayout2#SPACING_AUTO}, or a fixed size in pixels.
      */
     public float getRowSpacing() {
         return mRowSpacing;
@@ -341,7 +341,7 @@ public class FlowLayout extends ViewGroup {
      * Sets the vertical spacing between rows in pixels. Use SPACING_AUTO to evenly place all rows
      * in vertical.
      *
-     * @param rowSpacing The spacing, either {@link FlowLayout#SPACING_AUTO}, or a fixed size in
+     * @param rowSpacing The spacing, either {@link FlowLayout2#SPACING_AUTO}, or a fixed size in
      *                   pixels.
      */
     public void setRowSpacing(float rowSpacing) {

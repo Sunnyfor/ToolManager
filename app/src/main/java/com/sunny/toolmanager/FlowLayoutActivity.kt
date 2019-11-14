@@ -1,6 +1,5 @@
 package com.sunny.toolmanager
 
-import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.text.TextUtils
@@ -28,6 +27,8 @@ class FlowLayoutActivity : BaseActivity() {
     override fun initTitle(): View? = titleManager.defaultTitle("流式标签")
 
     override fun initView() {
+
+
         flowLayout.removeAllViews()
         flowLayout.childSpacing = resources.getDimensionPixelOffset(R.dimen.flow_layout_margin)
         flowLayout.rowSpacing = 17f
@@ -40,8 +41,25 @@ class FlowLayoutActivity : BaseActivity() {
         lp.rightMargin = 4
         labelList.indices
             .filterNot { TextUtils.isEmpty(labelList[it]) }
+            .map { flowLayout.buildLabel(labelList[it]) }
+            .forEach { flowLayout.addView(it, lp) }
+
+        /************************************** 分割线 **************************************/
+
+        flowLayout2.removeAllViews()
+        flowLayout2.childSpacing = resources.getDimensionPixelOffset(R.dimen.flow_layout_margin)
+        flowLayout2.rowSpacing = 17f
+
+        val lp2 = ViewGroup.MarginLayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+
+        lp2.rightMargin = 4
+        labelList.indices
+            .filterNot { TextUtils.isEmpty(labelList[it]) }
             .map { buildLabel(labelList[it], it) }
-            .forEach { flowLayout!!.addView(it, lp) }
+            .forEach { flowLayout2.addView(it, lp2) }
 
     }
 
@@ -49,6 +67,7 @@ class FlowLayoutActivity : BaseActivity() {
 
     }
 
+    /************************************** 以下只适用 FlowLayout2 **************************************/
 
     /**
      * 添加标签，设置标签样式
@@ -65,8 +84,8 @@ class FlowLayoutActivity : BaseActivity() {
         textView.textSize = 12f
         textView.gravity = Gravity.CENTER
 
-        textView.setTextColor(ContextCompat.getColor(this, labelColor[position]))
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            textView.setTextColor(ContextCompat.getColor(this, labelColor[position]))
             textView.background = getLabelBgColor(labelColorAlpha[position], labelColor[position])
         } else {
             textView.setTextColor(ContextCompat.getColor(this, R.color.flow_layout_label_default))
